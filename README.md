@@ -1,13 +1,17 @@
-# Sparty-2.0
+# Sparty-2.0.1
 
-Sparty-2.0 is an  tool written in Python to audit web applications using Sharepoint and Frontpage Architecture. This Tool gathers information, check access permissions, dump critical information from default files and perform automated exploitation if security risks are identified. 
+FORK EDIT:
+I needed to have specific HTTP headers in each request, so forked the OG and added the option to include custom headers in the arguments.
+
+Sparty-2.0.1 is a tool written in Python to audit web applications using Sharepoint and Frontpage Architecture. This Tool gathers information, check access permissions, dump critical information from default files and perform automated exploitation if security risks are identified. 
 
 ![sparty](https://user-images.githubusercontent.com/29165227/119223005-c09a2680-bb14-11eb-86b8-b8eaf5c7e62e.PNG)
 
-
+FORK EDIT:
+I needed to have specific HTTP headers in each request, so forked the OG and added the option to include custom headers in the arguments. 
 
 ## Installation
-- ` git clone https://github.com/MayankPandey01/Sparty-2.0.git`
+- ` git clone https://github.com/BenTheCyberOne/Sparty-2.0.git`
 
 ## Recommended Python Version:
 This Tool Only Supports Python 3.
@@ -25,7 +29,8 @@ Installation on Linux.
 
 ## How it Works
 This Tool uses 2 modules to Audit  SharePoint, `Exploitation  ` and `Enumeration`
-You can use one or both of them at once. `python Sparty-2.0 -u https://example.com -enum -exploit `
+You can use one or both of them at once. `python Sparty-2.0.1 -u https://example.com -enum -exploit `
+For additional headers in each request: `python Sparty-2.0.1 -u https://example.com -enum -H '{"Host":"127.0.0.1","Cookie":"token=session_token_here"}'`
 
 > Enumeration Module
 
@@ -59,8 +64,9 @@ You can use one or both of them at once. `python Sparty-2.0 -u https://example.c
 Short Form    | Long Form     | Description
 ------------- | ------------- |-------------
 url           | url           | A URL to scan 
--enum            | Enumeration| Uses Enumeration Module
--exploit            | Exploitation  | Uses Exploitation Module
+-enum         | Enumeration| Uses Enumeration Module
+-exploit      | Exploitation  | Uses Exploitation Module
+-H            | --headers     | Optional headers for requests
 -h            | --help        | Displays help 
 
 
